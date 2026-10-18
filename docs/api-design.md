@@ -60,3 +60,26 @@ Success Response (200 OK):
     }
   ]
 }
+Error Handling & Status Codes
+The API returns standard HTTP status codes along with a JSON error body containing an error code and message.
+
+Error Status Codes
+400 Bad Request: Validation failure (e.g., missing or title exceeding 100 characters).
+
+401 Unauthorized: Missing or invalid authentication token.
+
+403 Forbidden: Authenticated user lacks permission to access or modify the requested resource.
+
+404 Not Found: The requested resource ID does not exist.
+
+500 Internal Server Error: Unexpected server-side failure.
+
+Example Error Response Body (400 Bad Request)
+JSON
+{
+  "status": "fail",
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Title is required and must be 100 characters or fewer."
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickNotes API Client</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="api.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>QuickNotes Client</h1>
+        <p>Interactive API Client & System Dashboard</p>
+    </header>
+
+    <main class="container">
+        <!-- Load Section -->
+        <section class="card">
+            <h2>Manage Notes</h2>
+            <button id="load-btn">Load Notes</button>
+            <p id="status" class="status-message"></p>
+        </section>
+
+        <!-- Create Note Form Section -->
+        <section class="card">
+            <h2>Create New Note</h2>
+            <form id="note-form">
+                <div class="form-group">
+                    <label for="title-input">Title (required, max 100 chars):</label>
+                    <input type="text" id="title-input" maxlength="100" placeholder="Note title...">
+                </div>
+                <div class="form-group">
+                    <label for="body-input">Body (optional):</label>
+                    <textarea id="body-input" placeholder="Write your note content here..."></textarea>
+                </div>
+                <button type="submit" id="submit-btn">Submit Note</button>
+            </form>
+        </section>
+
+        <!-- Notes List Section -->
+        <section class="card">
+            <h2>Notes Feed</h2>
+            <ul id="notes-list">
+                <li class="empty-state">No notes loaded yet. Click "Load Notes" above.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 QuickNotes Kericreatives</p>
+    </footer>
+</body>
+</html>
